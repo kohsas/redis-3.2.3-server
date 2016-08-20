@@ -9,6 +9,6 @@ RUN sysctl vm.overcommit_memory=1
 ENTRYPOINT ["/usr/local/bin/redis-server", "--dir", "/data"]
 
 #
-# build:  docker build -t aashsat/redis-3.2.3-server .
-# run:    docker run -d -P -v ~/data/redis0:/data -name=redis0 ashsat/redis-3.2.3-server
+# build:  docker build -t aashsat/redis-server-3.2.3 .
+# run:    docker run -d -P -v ~/data/redis0:/data -name=redis0 ashsat/redis-server-3.2.3
 #
