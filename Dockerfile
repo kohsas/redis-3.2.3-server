@@ -6,7 +6,7 @@ FROM ashsat/redis-base-3.2.3:latest
 EXPOSE 6379
 VOLUME ["/data"]
 RUN sysctl vm.overcommit_memory=1
-ENTRYPOINT ["/usr/local/bin/redis-server", "--dir", "/data"]
+ENTRYPOINT ["/usr/local/bin/redis-server", "--dir", "/data", "--protected-mode", "no"]
 
 #
 # build:  docker build -t aashsat/redis-server-3.2.3 .
